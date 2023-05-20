@@ -9,16 +9,15 @@ import com.luv2code.springcoredemo.CricketCoach;
 public class DemoController {
 
     // define a private field for the dependency
-@SuppressWarnings("")
     private Coach myCoach;
 
     @Autowired
-    public DemoController(Coach theCoach){
+    public DemoController(Coach theCoach) {
         myCoach = theCoach;
     }
 
     @GetMapping("/dailyWorkout")
-    public String getDailyWorkout(){
+    public String getDailyWorkout() {
         return myCoach.getDailyWorkout();
     }
 }
