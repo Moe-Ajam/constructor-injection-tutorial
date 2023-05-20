@@ -1,9 +1,10 @@
-package com.luv2code.springcoredemo;
+package com.luv2code.springcoredemo.rest;
 
+import com.luv2code.springcoredemo.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.luv2code.springcoredemo.CricketCoach;
 
 @RestController
 public class DemoController {
@@ -12,7 +13,7 @@ public class DemoController {
     private Coach myCoach;
 
     @Autowired
-    public DemoController(Coach theCoach) {
+    public void DemoController(@Qualifier("swimCoach") Coach theCoach){
         myCoach = theCoach;
     }
 
