@@ -9,7 +9,7 @@ import com.luv2code.springcoredemo.CricketCoach;
 public class DemoController {
 
     // define a private field for the dependency
-
+@SuppressWarnings("")
     private Coach myCoach;
 
     @Autowired
